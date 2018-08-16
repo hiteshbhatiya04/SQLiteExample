@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".UpdateActivity">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_uname"
+        android:inputType="text"
+        android:hint="Enter Name" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_unumber"
+        android:hint="Mobile No"
+        android:inputType="number"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_uemail"
+        android:inputType="textEmailAddress"
+        android:hint="Enter Email" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_upassword"
+        android:inputType="textPassword"
+        android:visibility="visible"
+        android:hint="Enter Password" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender  : "
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_ugender"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rg_ugender"
+            android:layout_toRightOf="@+id/tv_ugender">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rad_umale"
+                android:text="Male"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rad_ufemale"
+                android:text="Female"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobby : "
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_uhobby"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chk_uplay"
+            android:text="Playing"
+            android:layout_toRightOf="@+id/tv_uhobby"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkp_ulistening"
+            android:text="Listening"
+            android:layout_toRightOf="@+id/chk_uplay"/>
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_updte"
+        android:textStyle="bold"
+        android:text="Update"/>
+
+</LinearLayout>
